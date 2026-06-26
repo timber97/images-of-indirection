@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Images of Indirection — Timber Stinson-Schroff</title>
+<meta name="description" content="A field guide to getting things done sideways. Nine images of indirection, one hidden taxonomy. A monograph in progress by Timber Stinson-Schroff.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Newsreader:ital,opsz@0,6..72;1,6..72&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EBE8E0;--paper-2:#E3E0D6;--ink:#1C1F21;--ink-2:#5A5D56;
+    --accent:#34416E;--line:#D4D0C6;--lock:#B7B4A9;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:880px;margin:0 auto;padding:0 26px}
+  .mono{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+  a{color:var(--accent)}
+  ::selection{background:var(--accent);color:var(--paper)}
+
+  header{padding:22px 0;border-bottom:1px solid var(--line)}
+  .bar{display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .brand{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+  .bar a{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink-2)}
+  .bar a:hover{color:var(--accent)}
+
+  .hero{padding:70px 0 8px;text-align:center}
+  .hero .kicker{margin-bottom:22px}
+  h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(2.8rem,8vw,5rem);line-height:1.0;letter-spacing:-.02em;margin:0 0 8px}
+  h1 .it{font-style:italic;font-weight:400}
+  .hero .sub{font-size:clamp(1.15rem,2.4vw,1.4rem);color:var(--ink-2);max-width:34ch;margin:14px auto 0;line-height:1.45}
+  .hero .blurb{font-size:1.12rem;max-width:54ch;margin:26px auto 0;line-height:1.6}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:32px 0 6px}
+  .cta a{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:13px 20px;border-radius:8px;transition:.2s}
+  .cta .primary{background:var(--ink);color:var(--paper)}
+  .cta .primary:hover{background:var(--accent)}
+  .cta .ghost{color:var(--ink);border:1px solid var(--line)}
+  .cta .ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* Taxonomy */
+  .taxonomy{padding:54px 0 20px}
+  .tax-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .tax-head .t{font-family:"Fraunces",serif;font-weight:600;font-size:1.5rem}
+  .tax-note{font-size:1rem;color:var(--ink-2);max-width:60ch;margin:6px 0 26px;line-height:1.5;font-style:italic}
+
+  .tax-grid{display:grid;grid-template-columns:minmax(80px,110px) repeat(3,1fr);gap:8px}
+  .corner{}
+  .col-hd{text-align:center;padding:0 4px 14px}
+  .col-hd .lb{font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem;display:block}
+  .col-hd .ds{font-family:"JetBrains Mono",monospace;font-size:.52rem;letter-spacing:.05em;color:var(--ink-2);display:block;margin-top:4px;line-height:1.45}
+  .row-hd{display:flex;flex-direction:column;justify-content:center;padding-right:8px}
+  .row-hd .lb{font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem;display:block}
+  .row-hd .ds{font-family:"JetBrains Mono",monospace;font-size:.48rem;letter-spacing:.04em;color:var(--ink-2);display:block;margin-top:5px;line-height:1.5}
+
+  .cell{display:flex;flex-direction:column;justify-content:space-between;min-height:140px;padding:18px 16px;border-radius:10px;transition:transform .18s,box-shadow .18s}
+  .cell.done{text-decoration:none;color:var(--ink);cursor:pointer}
+  .cell.done:hover{transform:translateY(-3px);box-shadow:0 10px 24px -14px rgba(28,31,33,.45)}
+  .cell .nm{font-family:"Fraunces",serif;font-size:1.3rem;font-weight:600;letter-spacing:-.01em;line-height:1.1}
+  .cell .tag{font-family:"JetBrains Mono",monospace;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
+  .cell .rd{font-family:"JetBrains Mono",monospace;font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-top:auto;padding-top:14px}
+
+  .cell.locked{background:#DDDBD6;border:1px dashed var(--line);align-items:center;justify-content:center}
+  .cell.locked .q{font-family:"Fraunces",serif;font-size:1.8rem;font-weight:400;color:var(--lock);opacity:.7}
+
+  .c-lever{background:#F0D4CF}
+  .c-domino{background:#F0CCD6}
+  .c-catalyst{background:#F0CFCB}
+  .c-lens{background:#CBD8F0}
+  .c-river{background:#CEE4CA}
+  .c-gravity{background:#DBCDF0}
+  .c-clock{background:#EDE9CA}
+  .c-virus{background:#D0E4CA}
+  .c-seed{background:#D0E4CA}
+
+  footer{margin-top:46px;padding:34px 0 56px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+  footer .mono{color:var(--ink-2)}
+  footer a{text-decoration:none}
+
+  a:focus-visible,.cell:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+
+  @media(max-width:600px){
+    .tax-grid{grid-template-columns:minmax(56px,74px) repeat(3,1fr);gap:6px}
+    .cell{min-height:105px;padding:12px 10px}
+    .cell .nm{font-size:1rem}
+    .cell .tag{font-size:.46rem}
+    .cell .rd{font-size:.5rem;padding-top:8px}
+    .col-hd .lb{font-size:.88rem}
+    .col-hd .ds{display:none}
+    .row-hd .lb{font-size:.88rem}
+    .row-hd .ds{font-size:.42rem}
+    .cell.locked .q{font-size:1.4rem}
+  }
+  @media(prefers-reduced-motion:reduce){.cell.done:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap bar">
+  <a class="brand" href="index.html">Images of Indirection</a>
+  <a href="https://blundercheck.timberschroff.com">Blundercheck &rarr;</a>
+</div></header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="kicker mono">A monograph in progress &middot; one image a month</div>
+    <h1>Images of<br><span class="it">Indirection</span></h1>
+    <p class="sub">A field guide to getting things done sideways.</p>
+    <p class="blurb">We are profoundly unimaginative about how change actually happens &mdash; we reach for leverage and push harder. This is a tour of nine other ways to move something without acting on it directly.</p>
+    <div class="cta">
+      <a class="primary" href="intro.html">Start here &mdash; the introduction &rarr;</a>
+      <a class="ghost" href="https://blundercheck.timberschroff.com">Subscribe for monthly chapters</a>
+    </div>
+  </section>
+
+  <section class="taxonomy">
+    <div class="tax-head">
+      <span class="t">The Taxonomy</span>
+      <span class="mono">3 &times; 3 &middot; revealed as chapters publish</span>
+    </div>
+    <p class="tax-note">Three rows, three columns, and a single axis that divides the nine. Positions are revealed as each chapter goes live.</p>
+
+    <div class="tax-grid">
+      <!-- Column headers -->
+      <div class="corner"></div>
+      <div class="col-hd"><span class="lb">Aimed</span><span class="ds">directed at a specific target</span></div>
+      <div class="col-hd"><span class="lb">Channeled</span><span class="ds">routed through a shaped path</span></div>
+      <div class="col-hd"><span class="lb">Diffuse</span><span class="ds">released into an environment</span></div>
+
+      <!-- Row 1: Push -->
+      <div class="row-hd"><span class="lb">Push</span><span class="ds">apply directed energy</span></div>
+      <a class="cell done c-lever" href="lever.html">
+        <div><div class="nm">Lever</div><div class="tag">push &middot; aimed</div></div>
+        <div class="rd">read &rarr;</div>
+      </a>
+      <div class="cell locked"><span class="q">?</span></div>
+      <div class="cell locked"><span class="q">?</span></div>
+
+      <!-- Row 2: Shape -->
+      <div class="row-hd"><span class="lb">Shape</span><span class="ds">sculpt the space others move through</span></div>
+      <div class="cell locked"><span class="q">?</span></div>
+      <div class="cell locked"><span class="q">?</span></div>
+      <div class="cell locked"><span class="q">?</span></div>
+
+      <!-- Row 3: Encode -->
+      <div class="row-hd"><span class="lb">Encode</span><span class="ds">compress intent that re-executes itself</span></div>
+      <div class="cell locked"><span class="q">?</span></div>
+      <div class="cell locked"><span class="q">?</span></div>
+      <a class="cell done c-seed" href="seed.html">
+        <div><div class="nm">Seed</div><div class="tag">encode &middot; diffuse</div></div>
+        <div class="rd">read &rarr;</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono">&copy; <span id="yr"></span> Timber Stinson-Schroff &middot; Whitehorse, Yukon</span>
+    <span class="mono"><a href="https://blundercheck.timberschroff.com">Blundercheck</a> &middot; <a href="mailto:hello@timberschroff.com">Email</a></span>
+  </footer>
+</main>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
