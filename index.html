@@ -58,6 +58,7 @@
   .cell{display:flex;flex-direction:column;justify-content:space-between;min-height:140px;padding:18px 16px;border-radius:10px;transition:transform .18s,box-shadow .18s}
   .cell.done{text-decoration:none;color:var(--ink);cursor:pointer}
   .cell.done:hover{transform:translateY(-3px);box-shadow:0 10px 24px -14px rgba(28,31,33,.45)}
+  .cell .glyph{width:28px;height:28px;color:var(--ink);opacity:.75;margin-bottom:8px}
   .cell .nm{font-family:"Fraunces",serif;font-size:1.3rem;font-weight:600;letter-spacing:-.01em;line-height:1.1}
   .cell .tag{font-family:"JetBrains Mono",monospace;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
   .cell .rd{font-family:"JetBrains Mono",monospace;font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-top:auto;padding-top:14px}
@@ -98,11 +99,6 @@
 </head>
 <body>
 
-<header><div class="wrap bar">
-  <a class="brand" href="index.html">Images of Indirection</a>
-  <a href="https://blundercheck.timberschroff.com">Blundercheck &rarr;</a>
-</div></header>
-
 <main class="wrap">
 
   <section class="hero">
@@ -130,7 +126,10 @@
       <!-- Row 1: Push -->
       <div class="row-hd"><span class="lb">Push</span><span class="ds">apply directed energy</span></div>
       <a class="cell done c-lever" href="lever.html">
-        <div><div class="nm">Lever</div><div class="tag">push &middot; aimed</div></div>
+        <div>
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="9" x2="21" y2="15"/><path d="M10 15 L13 19 L7 19 Z" fill="currentColor" stroke="none"/></svg>
+          <div class="nm">Lever</div><div class="tag">push &middot; aimed</div>
+        </div>
         <div class="rd">read &rarr;</div>
       </a>
       <div class="cell locked"><span class="q">?</span></div>
@@ -147,7 +146,10 @@
       <div class="cell locked"><span class="q">?</span></div>
       <div class="cell locked"><span class="q">?</span></div>
       <a class="cell done c-seed" href="seed.html">
-        <div><div class="nm">Seed</div><div class="tag">encode &middot; diffuse</div></div>
+        <div>
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21 V11"/><path d="M12 11 C12 7 9 5 5 5 C5 9 8 11 12 11Z"/><path d="M12 13 C12 10 15 8 19 8 C19 11 16 13 12 13Z"/></svg>
+          <div class="nm">Seed</div><div class="tag">encode &middot; diffuse</div>
+        </div>
         <div class="rd">read &rarr;</div>
       </a>
     </div>
