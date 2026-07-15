@@ -56,14 +56,7 @@
   .tax-head .t{font-family:"Fraunces",serif;font-weight:600;font-size:1.5rem}
   .tax-note{font-size:1rem;color:var(--ink-2);max-width:60ch;margin:6px 0 26px;line-height:1.5;font-style:italic}
 
-  .tax-grid{display:grid;grid-template-columns:minmax(80px,110px) repeat(3,1fr);gap:8px}
-  .corner{}
-  .col-hd{text-align:center;padding:0 4px 14px}
-  .col-hd .lb{font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem;display:block}
-  .col-hd .ds{font-family:"JetBrains Mono",monospace;font-size:.52rem;letter-spacing:.05em;color:var(--ink-2);display:block;margin-top:4px;line-height:1.45}
-  .row-hd{display:flex;flex-direction:column;justify-content:center;padding-right:8px}
-  .row-hd .lb{font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem;display:block}
-  .row-hd .ds{font-family:"JetBrains Mono",monospace;font-size:.48rem;letter-spacing:.04em;color:var(--ink-2);display:block;margin-top:5px;line-height:1.5}
+  .tax-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:660px;margin:0 auto}
 
   .cell{display:flex;flex-direction:column;justify-content:space-between;min-height:140px;padding:18px 16px;border-radius:10px;transition:transform .18s,box-shadow .18s}
   .cell.done{text-decoration:none;color:var(--ink);cursor:pointer}
@@ -122,14 +115,6 @@
 
   <section class="taxonomy">
     <div class="tax-grid">
-      <!-- Column headers -->
-      <div class="corner"></div>
-      <div class="col-hd"><span class="lb">Aimed</span></div>
-      <div class="col-hd"><span class="lb">Channeled</span></div>
-      <div class="col-hd"><span class="lb">Diffuse</span></div>
-
-      <!-- Row 1: Push -->
-      <div class="row-hd"><span class="lb">Push</span></div>
       <a class="cell done c-lever" href="lever.html">
         <div>
           <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="9" x2="21" y2="15"/><path d="M10 15 L13 19 L7 19 Z" fill="currentColor" stroke="none"/></svg>
@@ -141,13 +126,11 @@
       <div class="cell locked"><span class="q">?</span></div>
 
       <!-- Row 2: Shape -->
-      <div class="row-hd"><span class="lb">Shape</span></div>
       <div class="cell locked"><span class="q">?</span></div>
       <div class="cell locked"><span class="q">?</span></div>
       <div class="cell locked"><span class="q">?</span></div>
 
       <!-- Row 3: Encode -->
-      <div class="row-hd"><span class="lb">Encode</span></div>
       <div class="cell locked"><span class="q">?</span></div>
       <div class="cell locked"><span class="q">?</span></div>
       <a class="cell done c-seed" href="seed.html">
